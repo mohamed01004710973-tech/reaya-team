@@ -1,0 +1,260 @@
+/* التنسيقات العامة للموقع */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* تنسيق الشريط العلوي */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: #0b44a8;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo p {
+    color: #00a8cc;
+    font-size: 13px;
+    margin-top: -2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0b44a8;
+}
+
+/* تنسيق القسم الرئيسي */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    color: #0b44a8;
+    font-size: 42px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.humanitarian-text {
+    font-size: 20px;
+    color: #475569;
+    max-width: 800px;
+    margin: 0 auto 35px auto;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.btn-call {
+    display: inline-block;
+    background-color: #0b44a8;
+    color: #ffffff;
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(11, 68, 168, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-call:hover {
+    background-color: #08337e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(11, 68, 168, 0.35);
+}
+
+/* قسم الخدمات والكروت والمظهر التفاعلي للأسعار */
+.services-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    color: #0b44a8;
+    font-size: 32px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 11fr); /* 4 أعمدة مطابقة لتصميمك */
+    gap: 25px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تلوين حواف الكروت بلون أزرق خفيف عند المرور عليها */
+.service-card:hover {
+    border-color: #0b44a8;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(11, 68, 168, 0.08);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #0b44a8;
+    font-size: 19px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* تنسيق خانة السعر */
+.price-tag {
+    background-color: #f0f7ff;
+    color: #0b44a8;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 8px;
+    margin-top: auto;
+    font-size: 15px;
+    border: 1px dashed #0b44a8;
+}
+
+/* تنسيق الفوتر الأسفل */
+footer {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-about h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-about p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.contact-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+/* تحسينات الشاشات الصغيرة (الجوال) */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* عمودين في الشاشات المتوسطة */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar, .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        margin-top: 20px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .services-grid {
+        grid-template-columns: 1fr; /* عمود واحد على الجوال لراحة العين */
+    }
+    .contact-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+}
